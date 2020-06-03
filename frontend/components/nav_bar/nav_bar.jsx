@@ -2,12 +2,12 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import SplashSessionContainer from '../splash/splash_session_container';
 
-const gitHub = <a target='_blank' href='https://github.com/youngmanalive'>GitHub</a>;
-const linkedIn = <a target='_blank' href='https://www.linkedin.com/in/nathanharris-sf'>LinkedIn</a>;
+const gitHub = <a target='_blank' href='https://github.com/mmoussa2'>GitHub</a>;
+
 
 const userNav = (currentUser, logout) => (
   <div className='navbar-main-user'>
-    <NavLink to='/explore' className='navbar-logo'>fliqr</NavLink>
+    <NavLink to='/explore' className='navbar-logo'>fliker</NavLink>
     <div className='navbar-user-links'>
       <NavLink exact to={`/users/${currentUser.id}`}>You</NavLink>
       <NavLink to='/explore'>Explore</NavLink>
@@ -17,13 +17,13 @@ const userNav = (currentUser, logout) => (
       <div className='navbar-info-icon'>
         <div className='navbar-info-dropdown-container'>
           <div className='navbar-info-dropdown'>
-            <p className='navbar-info-dropdown-header'>you're on fliqr!</p>
+            <p className='navbar-info-dropdown-header'>Welcome to fliker!</p>
             <p className='navbar-info-dropdown-body'>
               This app was created using a Rails backend connected to a PostgreSQL database.
               Photos are stored using Amazon's S3. A React/Redux architecture completes the frontend for single page functionality.
             </p>
             <p className='navbar-info-dropdown-footer'>
-              Check out my {gitHub} or {linkedIn}
+               Github {gitHub} 
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const userNav = (currentUser, logout) => (
 
 const splashNav = () => (
   <div className='navbar-main-splash'>
-    <NavLink to='/' className='navbar-logo'>fliqr</NavLink>
+    <NavLink to='/' className='navbar-logo'>fliker</NavLink>
     <SplashSessionContainer />
   </div>
 );
