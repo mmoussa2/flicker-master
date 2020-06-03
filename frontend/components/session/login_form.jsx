@@ -9,7 +9,7 @@ class LoginForm extends React.Component {
       password: '',
     };
     
-    this.demo = { email: 'demo@fliqr.com', password: 'starwars' };
+    this.demo = { email: 'demo@gmail.com', password: 'demo@123' };
     this.demoIdx = 0;
     this.demoInterval = null;
 

@@ -13,9 +13,9 @@ end
 User.create(
   fname: 'Friend',
   lname: 'Account',
-  email: 'demo@fliqr.com',
+  email: 'demo@gmail.com',
   username: 'Friend',
-  password: 'starwars',
+  password: 'demo@123',
   created_at: genTime(5_000_000, 6_000_000)
 )
 
