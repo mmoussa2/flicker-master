@@ -1,0 +1,395 @@
+.user-profile {
+  background: #F3F5F6;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  min-height: 95vh;
+}
+
+
+// Header
+.user-profile-header {
+  background: #e9e9e9;
+  background-image: image-url('cover-photo.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+
+  .user-profile-header-gradient {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 130px;
+    padding-right: 130px;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.7));
+  }
+
+  .user-profile-header-gradient * {
+    color: #FFFFFF;
+  }
+  
+  .user-profile-header-main {
+    display: flex;
+    margin-top: auto;
+    padding-bottom: 20px;
+    
+    .user-profile-header-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-image: image-url('avatar-icon.svg');
+      background-size: cover;
+    }
+
+    .user-profile-header-info {
+      margin-top: auto;
+      padding: 0 0 9px 15px;
+    }
+
+    .user-profile-header-name {
+      font-size: 32px;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .user-profile-header-data {
+    margin-top: auto;
+    padding-bottom: 30px;
+
+    .photo-count {
+      padding-right: 15px;
+    }
+  }
+}
+
+
+// Links
+.user-profile-links {
+  position: sticky;
+  top: 50px;
+  display: flex;
+  height: 50px;
+  padding-left: 130px;
+  padding-right: 130px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #d3d3d3;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2;
+  
+  a {
+    margin: 0 5px;
+    padding: 12px 15px;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    transition: .3s;
+  }
+  a:hover, .active {
+    border-bottom: 3px solid #0093D9;
+  }
+}
+
+
+// Photostream and Album Show
+.user-profile-photostream,
+.album-show-container {
+  padding-top: 20px;
+
+  .photo-index {
+    margin: 0 129px;
+  }
+}
+
+.album-show-header {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+  margin: 0 130px;
+  
+  a { 
+    padding: 0;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .album-show-edit {
+    padding: 0;
+    color: #006dac;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 1px;
+  }
+
+  .album-show-edit:hover {
+    text-decoration: underline;
+  }
+
+  .album-show-delete {
+    margin-left: auto;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .album-show-delete:hover {
+    color: #ff0000;
+    text-decoration: underline;
+  }
+}
+
+
+.album-show-info {
+  background-color: #c9c9c9;
+  background: linear-gradient(to bottom, #c7c7c7 0%,#7a7a7a 100%);
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-bottom: 5px;
+  text-align: center;
+  padding-bottom: 10px;
+  border: 2px solid #F3F5F6;
+
+  * { 
+    padding: 10px;
+    color: #FFFFFF;
+  }
+
+  .album-title { 
+    font-size: 60px;
+    font-weight: 200;
+    padding: 10px;
+  }
+
+  .album-description {
+    font-size: 24px;
+    font-family: "Georgia, serif";
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .album-username a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+
+// Album Index
+.user-profile-album-index-container {
+  background: #F3F5F6;
+  padding: 10px 0 0 0;
+  height: 100%;
+  width: 100%;
+  min-height: 91vh;
+
+  .user-profile-album-index {
+    margin: 0 128px;
+  }
+
+  .album-index-header {
+    text-align: end;
+
+    a {
+      margin-right: 50px;
+      color: grey;
+    }
+  }
+
+  .album-index-list {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .album-index-link {
+    margin: 15px;
+
+    ::before, ::after, div {
+      transition: all 0.2s;
+    }
+
+    .album-index-item {
+      height: 240px;
+      width: 240px;
+      position: relative;
+      background: #c7c7c7;
+      background-size: cover;
+  
+      div {
+        color: #ffffff;
+        text-shadow: 0 0 10px #000;
+        font-weight: 400;
+        position: relative;
+        top: 170px;
+        left: 20px;
+      }
+  
+      .album-title {
+        padding-bottom: 5px;
+        font-size: 20px;
+      }
+  
+      .album-photo-count {
+        font-size: 16px;
+      }
+    }
+  
+    .album-index-item:before, .album-index-item:after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #AFB7BC;
+    }
+  
+    .album-index-item::before {
+      right: 16px;
+      left: 16px;
+      top: -5px;
+    }
+  
+    .album-index-item::after {
+      right: 8px;
+      left: 8px;
+      top: -3px;
+    }
+
+    &:hover {
+      .album-index-item::before {
+        top: -8px;
+      }
+
+      .album-index-item::after {
+        top: -5px;
+      }
+
+      .album-index-item div {
+        color: #c4c4c4;
+      }
+    }
+  }
+}
+
+// User has no photos
+.user-profile-no-photos {
+  font-size: 30px;
+  text-align: center;
+  padding: 50px;
+  background-color: #F3F5F6;
+}
+
+// Errors
+.user-profile-errors {
+  background: #ffffff;
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+
+  .error-message {
+    margin: 40px;
+    font-size: 24px;
+  }
+
+  a {
+    font-size: 18px;
+    background: #cecece;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: #575757;
+  }
+}
+
+
+// Media queries
+@media screen and (max-width: 1300px) {
+  .user-profile-links,
+  .user-profile-header .user-profile-header-gradient {
+    padding: 0 100px;
+  }
+
+  .user-profile-photostream {
+    .photo-index {
+      margin: 0 100px
+    }
+  }
+
+  .user-profile-album-index-container {
+    .user-profile-album-index {
+      margin: 0 100px;
+    }
+  }
+
+  .album-show-container {
+    .album-show-header,
+    .album-show-info,
+    .photo-index {
+      margin: 0 100px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .user-profile-links,
+  .user-profile-header .user-profile-header-gradient {
+    padding: 0 50px;
+  }
+
+  .user-profile-photostream {
+    .photo-index {
+      margin: 0 50px
+    }
+  }
+
+  .user-profile-album-index-container {
+    .user-profile-album-index {
+      margin: 0 50px;
+    }
+  }
+
+  .album-show-container {
+    .album-show-header,
+    .album-show-info,
+    .photo-index {
+      margin: 0 50px;
+    }
+  }
+}
+
+@media (max-width: 815px) {
+  .user-profile-links,
+  .user-profile-header .user-profile-header-gradient {
+    padding: 0 25px;
+  }
+
+  .user-profile-photostream {
+    .photo-index { 
+      margin: 0 10px
+    }
+  }
+
+  .user-profile-album-index-container {
+    .user-profile-album-index {
+      margin: 0 25px;
+    }
+  }
+
+  .album-show-container {
+    .album-show-header,
+    .album-show-info,
+    .photo-index {
+      margin: 0 25px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .user-profile-photostream {
+    .photo-index { margin: 0 5px }
+  }
+}
+
