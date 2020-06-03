@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./frontend/fliqr.jsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./frontend/fliker.jsx");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./frontend/fliqr.jsx":
-/*!****************************!*\
-  !*** ./frontend/fliqr.jsx ***!
-  \****************************/
+/***/ "./frontend/fliker.jsx":
+/*!*****************************!*\
+  !*** ./frontend/fliker.jsx ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
